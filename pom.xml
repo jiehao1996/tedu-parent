@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>tedu-parent</name>
 
+    <!-- 依赖模块-->
     <modules>
         <module>tedu-api</module>
         <module>tedu-code</module>
