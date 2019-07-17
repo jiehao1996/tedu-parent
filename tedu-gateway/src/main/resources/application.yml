@@ -1,0 +1,15 @@
+server:
+  port: 8071
+
+spring:
+  application:
+    name: tedu-gateway
+  dubbo:
+    server: true
+    registry: zookeeper://localhost:2181
+
+logging:
+  level.root: info
+  level.com.gdglc.tedu: debug
+  path: logs/
+  file: tedu-gateway.log
