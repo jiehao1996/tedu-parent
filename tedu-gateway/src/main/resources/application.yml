@@ -19,10 +19,14 @@ spring:
   dubbo:
     server: true
     registry: zookeeper://localhost:2181
-  mvc:
-    view:
-      suffix: .jsp
-      prefix: /WEB-INF/jsp/
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/xxx?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root

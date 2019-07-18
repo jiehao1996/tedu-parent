@@ -1,5 +1,6 @@
 package com.gdglc.tedu.rest.modular.config;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import com.gdglc.tedu.rest.modular.filter.JWTFilter;
 import com.gdglc.tedu.rest.modular.shiro.CustomRealm;
 import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
@@ -19,6 +20,14 @@ import java.util.Map;
 
 @Configuration
 public class ShiroConfig {
+
+    /**
+     * ShiroDialect，为了在thymeleaf里使用shiro的标签的bean
+     */
+    @Bean
+    public ShiroDialect shiroDialect() {
+        return new ShiroDialect();
+    }
 
     /**
      * 先走filter，然后filter如果检测到请求头存在token，则用token去login，走Realm去验证
