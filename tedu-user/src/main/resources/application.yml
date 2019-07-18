@@ -10,3 +10,9 @@ spring:
     protocol:
       name: dubbo
       port: 20881
+
+logging:
+  level.root: info
+  level.com.gdglc.tedu: debug
+  path: logs/
+  file: tedu-user.log
